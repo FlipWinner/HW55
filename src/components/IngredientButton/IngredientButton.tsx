@@ -12,7 +12,7 @@ const IngredientButton: React.FC<Props> = ({ name, image, count, functionOnClick
 		<>
 			<button type='button' onClick={() => functionOnClick(name)}>
 				<div>
-					<img src={image} alt={name}/>
+					<img className='image' src={image} alt={name}/>
 					<span>{name}</span>
 				</div>
 				<span>{count}</span>

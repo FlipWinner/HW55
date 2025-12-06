@@ -55,21 +55,23 @@ const App = () => {
 
 	return (
 		<>
-
-			{INGREDIENTS.map((item, index) => (
-				<div className="ingredient-container" key={index}>
-					<IngredientButton name={item.name} image={item.image} count={ingredients[index].count} functionOnClick={addIngredient} />
-					{ingredients[index].count > 0
-                        && <button onClick={() => deleteIngredient(item.name)}>Delete</button>
-					}
+			<div className='App'>
+				<div className="main-block-left">
+					{INGREDIENTS.map((item, index) => (
+						<div className="ingredient-container" key={index}>
+							<IngredientButton name={item.name} image={item.image} count={ingredients[index].count} functionOnClick={addIngredient} />
+							{ingredients[index].count > 0
+                                && <button onClick={() => deleteIngredient(item.name)}>Delete</button>
+							}
+						</div>
+					))}
 				</div>
-			))}
-            
-			<div className="burger-container">
-				<span>{total}</span>
-				<Burger ingredients={ingredients} />
+                
+				<div className="main-block-right">
+					<span>Price: {total}</span>
+					<Burger ingredients={ingredients} />
+				</div>
 			</div>
-            
 		</>
 	);
 };

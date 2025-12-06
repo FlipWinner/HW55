@@ -5,6 +5,51 @@
   text-align: center;
 }
 
+.App {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+}
+
+.main-block-right{
+    display: flex;
+    gap: 1rem;
+    flex-flow: column nowrap;
+    border: #000000 solid 1px;
+}
+
+.main-block-left {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 8px;
+    border: #000000 solid 1px;
+    width: 50%;
+}
+
+.ingredient-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.ingredient-container button {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.ingredient-container span {
+    padding: 15px;
+}
+
+.image{
+    max-width: 80px;
+}
+
 .BreadBottom {
     height: 13%;
     width: 80%;
@@ -147,4 +192,8 @@
         width: 350px;
         height: 200px;
     }
+}
+
+.main-block-right {
+
 }
